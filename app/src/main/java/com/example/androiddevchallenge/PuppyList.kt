@@ -24,10 +24,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.androiddevchallenge.ui.theme.MyTheme
 
 @Composable
-fun PuppyList(dogs: List<Doge>) {
+fun PuppyList(dogs: List<Doggo>, onItemClicked: (Doggo) -> Unit) {
     LazyColumn {
         items(dogs) { dog ->
-            PuppyListItem(dog) { }
+            PuppyListItem(dog) { onItemClicked(dog) }
             Divider(color = Color.DarkGray)
         }
     }
@@ -37,6 +37,6 @@ fun PuppyList(dogs: List<Doge>) {
 @Composable
 fun PuppyListPreview() {
     MyTheme {
-        PuppyList(List(10) { Doge() })
+        PuppyList(List(10) { Doggo() }) {}
     }
 }

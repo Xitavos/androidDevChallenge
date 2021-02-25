@@ -33,7 +33,7 @@ import androidx.compose.ui.unit.sp
 import com.example.androiddevchallenge.ui.theme.MyTheme
 
 @Composable
-fun PuppyListItem(dog: Doge, onItemClicked: () -> Unit) {
+fun PuppyListItem(dog: Doggo, onItemClicked: () -> Unit) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier.fillMaxWidth()
@@ -57,6 +57,6 @@ fun PuppyListItem(dog: Doge, onItemClicked: () -> Unit) {
 @Composable
 fun PuppyListItemPreview() {
     MyTheme {
-        PuppyListItem(Doge()) { }
+        PuppyListItem(Doggo()) { }
     }
 }
