@@ -49,7 +49,7 @@ fun PuppyDetailScreen(navController: NavController, dog: Doggo) {
                 TopAppBar(
                     title = { Text(text = "Adopt ${dog.name}") },
                     navigationIcon = {
-                        IconButton(onClick = { navController.popBackStack()}) {
+                        IconButton(onClick = { navController.popBackStack() }) {
                             Icon(Icons.Filled.ArrowBack, contentDescription = null)
                         }
                     }
@@ -77,8 +77,7 @@ fun PuppyInfo(dog: Doggo) {
         Divider(color = Color.DarkGray, modifier = Modifier.padding(vertical = 20.dp))
         Text(text = "${dog.name} is a very good doggo. They are available for adoption right now!")
         Spacer(modifier = Modifier.height(20.dp))
-        Button(onClick = {  })
-        {
+        Button(onClick = { }) {
             Text(text = "Adopt ${dog.name} now!")
         }
     }
