@@ -62,6 +62,8 @@ val dogNames = listOf(
 )
 val dogEmojis = listOf("🐶", "🐕", "🦮", "🐩", "🐕‍🦺", "🌭", "🐈")
 
+val dogs = List(100) { Doggo() }
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -106,7 +108,7 @@ fun DogsListScreen(navController: NavController) {
             },
             content = {
                 PuppyList(
-                    dogs = List(25) { Doggo() },
+                    dogs = dogs,
                     onItemClicked = { dog ->
                         navController.navigate("dogdetail/name=${dog.name},emoji=${dog.emoji},age=${dog.age}")
                     }
